@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>แบบสำรวจตู้ CDMA ASON</title>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid tomato;
+}
+div.a {
+  text-align: right;
+}
+</style>
+
+</head>
+<body>
+  <form>
+<div class="container table-responsive-sm form-group" style="margin-top:50px;">
+  <table style="border: none">
+    <thead>
+  <h1>แบบสำรวจตู้ <input type="checkbox"> CDMA <input type="checkbox"> ASON </h1></thead>
+</table>
+
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputsitename">site name</label>
+      <input type="text" class="form-control" id="inputsitename">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputsitecode">site code</label>
+      <input type="text" class="form-control" id="inputsitecode">
+    </div>
+  </div>
+
+  <h4>สภาพตู้</h4>
+  <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+      <label class="custom-control-label" for="customRadioInline1">ปกติ</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+      <label class="custom-control-label" for="customRadioInline2">ชำรุด</label>
+    </div>
+
+    <div class="form-group">
+    <div class="form-group col-md-3">
+    <input type="text" class="form-control" id="input1">
+    </div>
+  </div>
+
+
+<div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="inputEmail4">Date</label>
+      <input type="date" class="form-control" id="inputdate">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputsk">สค</label>
+      <input type="text" class="form-control" id="inputsk">
+    </div>
+  </div>
+
+  <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="inputlat">Lattitude</label>
+        <input type="flote" class="form-control" id="inputlat">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputlong">Longtitude</label>
+        <input type="flote" class="form-control" id="inputlong">
+      </div>
+    </div>
+</div>
+
+<div class="container table-responsive-sm" style="margin-top:50px;">
+    <h1>Network Equipment</h1>
+  <table class="table">
+    <thead class="w3-deep-orange w3-center">
+      <tr>
+        <th rowspan="2" >อุปกรณ์</th>
+        <th rowspan="2" colspan="2" width="500px">รายละเอียด(ยี่ห้อ/รุ่น)</th>
+        <th colspan="2">Power Supply</th>
+      </tr>
+      <tr>
+        <td>source1</td>
+        <td>source2</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox">L3</td>
+        <td><input type="text" class="text form-control" placeholder="1."></td>
+        <td><input type="text" class="text form-control" placeholder="IP"></td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td rowspan="3"><input type="checkbox">L2</td>
+        <td><input type="text" class="text form-control" placeholder="1."></td>
+        <td><input type="text" class="text form-control"  placeholder="IP"></td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" class="text form-control" placeholder="2.">
+        </td>
+        <td><input type="text" class="text form-control"  placeholder="IP"></td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="text" class="text form-control"placeholder="3." >
+        </td>
+        <td><input type="text" class="text form-control" placeholder="IP"></td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">DWDM</td>
+        <td colspan="2"><input type="text" class="text form-control" placeholder="1."></td>
+        <td><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">SDH</td>
+        <td colspan="2"><input type="text" class="text form-control" placeholder="1."></td>
+        <td><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td rowspan="2"><input type="checkbox">xPON</td>
+        <td><input type="text" class="text form-control" placeholder="1."></td>
+        <td><input type="text" class="text form-control" placeholder="IP"></td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" class="text form-control" placeholder="2.">
+        </td>
+        <td><input type="text" class="text form-control" placeholder="IP"></td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td rowspan="2"><input type="checkbox">DSLAM</td>
+        <td colspan="2"><input type="text" class="text form-control" placeholder="1."></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="text" class="text form-control" placeholder="2.">
+        </td>
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+
+      </tr>
+      <tr>
+        <td><input type="checkbox">Media converter</td>
+        <td colspan="2"><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">Media Converter</td>
+        <td colspan="2"><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">FOM</td>
+        <td colspan="2"><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">อื่นๆ</td>
+        <td colspan="2"><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">อื่นๆ</td>
+        <td colspan="2"><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox">อื่นๆ</td>
+        <td colspan="2"><input type="text" class="text form-control"></td>
+
+        <td><input type="text" class="text form-control"></td>
+        <td><input type="text" class="text form-control"></td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+</div>
+
+<div class="container" style="margin-top:50px;">
+  <h1>Power Supply</h1>
+  <table class="table">
+    <tr>
+      <td>
+        <p><input type="checkbox"> DC </p>
+
+
+
+      </td>
+      <td>
+        <p><input type="checkbox">Node B <input type="checkbox">ASON <input type="checkbox"> PEMON/ECMS IP <input type="text"></p>
+        <p>R#1</p><p><input type="checkbox">Supply EMERSON Load <input type="text" size="5"> V <input type="text" size="2"> Amp Battery <input type="text" size="5"> Ah  จำนวน <input type="text" size="2"> ลูก ยี่ห้อ <input type="text" size="5">  ว/ด/ป <input type="date"> </p>
+        <p>R#2</p><p><input type="checkbox">Supply EMERSON Load <input type="text" size="5"> V <input type="text" size="2"> Amp Battery <input type="text" size="5"> Ah  จำนวน <input type="text" size="2"> ลูก ยี่ห้อ <input type="text" size="5">  ว/ด/ป <input type="date"> </p>
+        <p>R#3</p><p><input type="checkbox">Supply EMERSON Load <input type="text" size="5"> V <input type="text" size="2"> Amp Battery <input type="text" size="5"> Ah  จำนวน <input type="text" size="2"> ลูก ยี่ห้อ <input type="text" size="5">  ว/ด/ป <input type="date"> </p>
+      </td>
+
+
+    </tr>
+      <td>
+        <input type="checkbox"> AC
+      </td>
+      <td>
+        <p><input type="checkbox"> 1 เฟส <input type="checkbox"> 3 เฟส หม้อแปลงยี่ห้อ <input type="text">&nbsp;&nbsp;&nbsp;&nbsp; ขนาด  <input type="text"> KVA</p>
+      </td>
+    <tr>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"> Inverter
+      </td>
+      <td>
+        <p>1)ยี่ห้อ <input type="text"> ขนาด <input type="text"> Watt  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;From <input type="text"></p>
+        <p>2)ยี่ห้อ <input type="text"> ขนาด <input type="text"> Watt  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;From <input type="text"></p>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"> UPS
+      </td>
+      <td>
+         <p>ขนาด  <input type="text"> KVA &nbsp;ยี่ห้อ <input type="text"> &nbsp;รุ่น <input type="text"> ชนิด <input type="checkbox"> 1 เฟส <input type="checkbox"> 3 เฟส</p>
+
+
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"> GEN
+      </td>
+      <td> <p>ขนาด  <input type="text"> KVA &nbsp;ยี่ห้อ <input type="text"> &nbsp;รุ่น <input type="text"> ชนิด <input type="checkbox"> 1 เฟส <input type="checkbox"> 3 เฟส</p>
+      </td>
+    </tr>
+
+
+
+  </table>
+</div>
+
+<div class="container" style="margin-top:50px;">
+  <h1>Air Flow</h1>
+  <table class="table">
+    <tr>
+      <td>
+        <input type="checkbox"> แอร์
+      </td>
+      <td>
+        <p>1)ยี่ห้อ <input type="text"> BTU <input type="text"> &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;สภาพ <input type="checkbox"> ดี <input type="checkbox"> เก่าเสื่อม <input type="text"></p>
+        <p>2)ยี่ห้อ <input type="text"> BTU <input type="text"> &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;สภาพ <input type="checkbox"> ดี <input type="checkbox"> เก่าเสื่อม <input type="text"></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox"> พัดลม
+      </td>
+      <td>
+        <p>ดูดเข้า &nbsp;ขนาด <input type="text"> นิ้ว &nbsp;จำนวน <input type="number"> ตัว &nbsp;สภาพ <input type="checkbox"> ดี <input type="checkbox"> เก่าเสื่อม <input type="text"></p>
+        <p>เป่าออก &nbsp;ขนาด <input type="text"> นิ้ว &nbsp;จำนวน <input type="number"> ตัว &nbsp;สภาพ <input type="checkbox"> ดี <input type="checkbox"> เก่าเสื่อม <input type="text"></p>
+    </tr>
+
+
+  </table>
+
+</div>
+
+<div class="a" style="margin-right:50px; margin-top:50px;" >
+  <p>สำรวจโดย <input type="text"> <input type="submit"></p>
+</div>
+
+</form>
+</body>
+</html>
